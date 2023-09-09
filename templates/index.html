@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} SART - SISTEMA DE ADMINISTRAÇÃO PARA REPRESENTANTES DE TURMA{% endblock %} </title>
+</head>
+<body>
+    <a href="{% url 'client_list' %}">Listar</a>
+    <br>
+    <a href="{% url 'client_add' %}">Cadastrar</a>
+    <br>
+
+   {% block main %} {% endblock %}
+ </body>
+</html>

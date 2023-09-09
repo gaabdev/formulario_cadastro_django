@@ -1,0 +1,8 @@
+{% extends 'index.html' %} 
+{% block main %}
+<h1> Cliente </h1>
+<form class="pt-3" method="post" enctype="multipart/form-data">
+{% csrf_token %} 
+{{form.as_p}}
+<button type="submit" class="btn btn-primary">INCLUIR</button>
+{% endblock %}
