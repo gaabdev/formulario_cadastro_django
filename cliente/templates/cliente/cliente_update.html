@@ -1,0 +1,12 @@
+{% extends 'index.html' %} 
+{% block main %}
+<h1> Alterar Cliente {{cliente.nome}}</h1>
+<form class="pt-3" method="post" enctype="multipart/form-data">
+{% csrf_token %} 
+    <div class="form-control m-6">
+            <h3 class="m-3">  Alterar Cliente </h3>
+            {{form.as_p}}
+            <button type="submit" class="btn btn-primary">SALVAR</button>
+    </div>
+</form>
+{% endblock %}

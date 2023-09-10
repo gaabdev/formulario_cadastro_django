@@ -23,6 +23,6 @@ urlpatterns = [
     path('', ClienteIndex.as_view(), name='client_list'),
     path('add/', ClienteAdd.as_view(), name='client_add'),
     path('list/', ClienteList.as_view(), name='client_list'),
-    path('update/', ClienteUpdate.as_view(), name='client_update'),
-    path('delete/', ClienteDelete.as_view(), name='client_delete'),
+    path('update/<int:pk>', ClienteUpdate.as_view(), name='client_update'),
+    path('delete/<int:pk>', ClienteDelete.as_view(), name='client_delete'),
 ]

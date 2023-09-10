@@ -20,8 +20,11 @@ class ClienteAdd(CreateView):
 
 class ClienteUpdate(UpdateView):
 	model = Cliente
+	template_name = 'cliente/cliente_update.html'
+	fields = "__all__"
 	success_url = reverse_lazy('client_list')
 
 class ClienteDelete(DeleteView):
 	model = Cliente
+	template_name = 'cliente/cliente_delete.html'
 	success_url = reverse_lazy('client_list')

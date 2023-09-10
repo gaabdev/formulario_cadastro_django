@@ -1,8 +1,11 @@
 {% extends 'index.html' %} 
 {% block main %}
-<h1> Cliente </h1>
-<form class="pt-3" method="post" enctype="multipart/form-data">
+<form class="pt-3" method="post"  enctype="multipart/form-data">
 {% csrf_token %} 
-{{form.as_p}}
-<button type="submit" class="btn btn-primary">INCLUIR</button>
+<div class="form-control m-5">
+    <h3 class="m-3"> Incluir Cliente </h3>
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary">SALVAR</button>
+</div>
+</form>
 {% endblock %}
