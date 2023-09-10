@@ -1,8 +1,8 @@
-#Relatório: Projeto de Cadastro de Clientes em Django
-##Introdução
+# Relatório: Projeto de Cadastro de Clientes em Django
+## Introdução
 O Django é um framework web em Python que facilita o desenvolvimento de aplicações web robustas e escaláveis. Neste relatório, descreveremos um projeto prático de cadastro de clientes utilizando Django. O objetivo é criar uma aplicação web que permita o cadastro de informações essenciais de clientes, incluindo nome, sobrenome e data de nascimento.
 
-##Configuração do Ambiente
+## Configuração do Ambiente
 O primeiro passo ao utilizar o Django é configurar o ambiente de desenvolvimento. Certifique-se de ter o Python instalado em sua máquina e, em seguida, instale o Django utilizando o pip:
 
 
@@ -51,16 +51,15 @@ Este modelo inclui três campos: nome, sobrenome e data_nascimento, sendo que o 
 Migrações e Banco de Dados
 Após definir o modelo de dados, geramos migrações para aplicar essas alterações ao banco de dados:
 
-##bash
 
 python manage.py makemigrations
 python manage.py migrate
 Dessa forma, a tabela correspondente ao modelo Cliente é criada no banco de dados configurado.
 
-##Administração de Clientes
+Administração de Clientes
 O Django fornece um painel de administração que facilita a gestão de dados. Para habilitar a administração do modelo Cliente, registramos o modelo no arquivo admin.py do aplicativo "clientes":
 
-##python
+python
 
 from django.contrib import admin
 from .models import Cliente
@@ -68,5 +67,5 @@ from .models import Cliente
 admin.site.register(Cliente)
 A partir desse ponto, podemos acessar o painel de administração em /admin/ e gerenciar os registros de clientes.
 
-##Conclusão
+## Conclusão
 Este relatório apresentou um projeto de cadastro de clientes desenvolvido com o framework Django em Python. Através da definição do modelo de dados, configuração de migrações, criação de uma interface de administração e utilização de formulários, é possível construir uma aplicação web simples, mas funcional, para o cadastro de clientes. O Django oferece uma estrutura sólida para o desenvolvimento web, tornando o processo eficiente e altamente produtivo. Este projeto pode ser uma base sólida para futuras expansões e personalizações, dependendo das necessidades do negócio.
